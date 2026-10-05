@@ -10,6 +10,7 @@ Fujitzee is a clone of the popular Yahtzee dice game.
 * **ColecoVision** *(cartridge, over the FujiNet cart mailbox)*
 * **Fairchild Channel F** *(cartridge, over the FujiNet cart mailbox)*
 * **NES** *(cartridge, over the FujiNet cart mailbox)*
+* **Palm OS** *(in a serial HotSync cradle on an FN-RS232)*
 * **C64** *(planned)*
 * *Please contribute to add more!*
 
@@ -38,6 +39,19 @@ defoogi make -C fujinet-fujitzee adam
 
 The bootable tape image lands at `r2r/adam/fujitzee.ddp` (and is copied to
 `~/tnfs/` if that directory exists).
+
+### To build: *Palm OS*
+
+A standalone client in the `palm/` directory, built with prc-tools in Docker. The Palm sits in
+its serial HotSync cradle on a FujiNet running the HotSync service, and reaches the server
+through FujiNet's `N1:` device.
+
+```
+cd palm && make image   # once
+cd palm && make         # -> build/Fujitzee.prc
+```
+
+See `palm/README.md` for playing, installing over HotSync and the layout.
 
 ### To build: *ColecoVision*
 

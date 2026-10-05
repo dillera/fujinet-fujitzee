@@ -1,0 +1,4 @@
+tests/fujitzee_test
+# The top-level fujitzee.* rule is for build outputs; these are sources.
+!Fujitzee.c
+!Fujitzee.rcp
